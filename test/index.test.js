@@ -32,11 +32,9 @@ describe('High-level API tests', () => {
         return ap.getCurrentAvailability()
             .then(response => {
                 expect(response[0].name).to.equal('P+R Johan Cruijff ArenA');
-                expect(response[1].spaces).to.equal(253);
-
+                expect(response[0].spaces).to.equal(1930);
             })
             .catch(err => {
-            
             });
     });
 });
