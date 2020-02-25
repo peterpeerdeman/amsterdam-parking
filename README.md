@@ -1,4 +1,4 @@
-# node-tado-client
+# amsterdam-parking
 [![Build Status](https://travis-ci.org/peterpeerdeman/amsterdam-parking.svg?branch=master)](https://travis-ci.org/peterpeerdeman/amsterdam-parking)
 
 An Amsterdam Parking API client for Node
