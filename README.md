@@ -1,5 +1,6 @@
 # amsterdam-parking
-[![Build Status](https://travis-ci.org/peterpeerdeman/amsterdam-parking.svg?branch=master)](https://travis-ci.org/peterpeerdeman/amsterdam-parking)
+
+[![peterpeerdeman](https://circleci.com/gh/peterpeerdeman/amsterdam-parking.svg?style=svg)](https://app.circleci.com/pipelines/github/peterpeerdeman/amsterdam-parking)
 
 An Amsterdam Parking API client for Node
 
