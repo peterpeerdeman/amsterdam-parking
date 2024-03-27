@@ -1,6 +1,6 @@
 {
   "name": "amsterdam-parking",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An Amsterdam Parking client for nodejs",
   "main": "index.js",
   "dependencies": {
