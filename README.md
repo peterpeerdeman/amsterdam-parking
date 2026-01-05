@@ -2,9 +2,12 @@
 
 [![peterpeerdeman](https://circleci.com/gh/peterpeerdeman/amsterdam-parking.svg?style=svg)](https://app.circleci.com/pipelines/github/peterpeerdeman/amsterdam-parking)
 
+**DEPRECATION NOTICE:** The API's were changed to a protected cloudflare endpoint, the URL that was used in this module is not working anymore
+
 An Amsterdam Parking API client for Node
 
 ## Usage
+
 ```javascript
 // Import the Amsterdam Parking client
 const AP = require('amsterdam-parking');
@@ -13,51 +16,69 @@ const AP = require('amsterdam-parking');
 var ap = new AP();
 
 // Get the parking information
-ap.getCurrentAvailability().then(resp => { console.log(resp); });
+ap.getCurrentAvailability().then((resp) => {
+    console.log(resp);
+});
 ```
 
 This call will return something similar to the following Javascript object.
 
 ```javascript
-[ { status: 'success',
-    name: 'P+R Johan Cruijff ArenA',
-    availability: 'Available',
-    spaces: 1704 },
-  { status: 'success',
-    name: 'P+R Zeeburg 2',
-    availability: 'Available',
-    spaces: 253 },
-  { status: 'success',
-    name: 'P+R Noord',
-    availability: 'Available',
-    spaces: 190 },
-  { status: 'success',
-    name: 'P+R Sloterdijk',
-    availability: 'Available',
-    spaces: 51 },
-  { status: 'success',
-    name: 'P+R Bos en Lommer',
-    availability: 'Available',
-    spaces: 45 },
-  { status: 'success',
-    name: 'P+R Zeeburg 1',
-    availability: 'Available',
-    spaces: 15 },
-  { status: 'danger',
-    name: 'P+R Olympisch Stadion',
-    availability: 'Full',
-    spaces: 0 },
-  { status: 'active',
-    name: 'P+R RAI',
-    availability: 'Closed',
-    spaces: 0 },
-  { status: 'active',
-    name: 'Weekend P+R VUmc',
-    availability: 'Closed',
-    spaces: 0 } ]
+[
+    {
+        status: 'success',
+        name: 'P+R Johan Cruijff ArenA',
+        availability: 'Available',
+        spaces: 1704,
+    },
+    {
+        status: 'success',
+        name: 'P+R Zeeburg 2',
+        availability: 'Available',
+        spaces: 253,
+    },
+    {
+        status: 'success',
+        name: 'P+R Noord',
+        availability: 'Available',
+        spaces: 190,
+    },
+    {
+        status: 'success',
+        name: 'P+R Sloterdijk',
+        availability: 'Available',
+        spaces: 51,
+    },
+    {
+        status: 'success',
+        name: 'P+R Bos en Lommer',
+        availability: 'Available',
+        spaces: 45,
+    },
+    {
+        status: 'success',
+        name: 'P+R Zeeburg 1',
+        availability: 'Available',
+        spaces: 15,
+    },
+    {
+        status: 'danger',
+        name: 'P+R Olympisch Stadion',
+        availability: 'Full',
+        spaces: 0,
+    },
+    { status: 'active', name: 'P+R RAI', availability: 'Closed', spaces: 0 },
+    {
+        status: 'active',
+        name: 'Weekend P+R VUmc',
+        availability: 'Closed',
+        spaces: 0,
+    },
+];
 ```
 
 The following API calls are available
+
 ```javascript
 ap.getCurrentAvailability();
 ```
